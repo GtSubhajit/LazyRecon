@@ -52,9 +52,9 @@ setupTools(){
 
 subEnumTools(){
     echo -e "${GREEN}\n--==[ Installing subdomain enum tools ]==--${RESET}"
+    if [ ! -x "$(command -v amass)" ]; then
     installBanner "Amass"
-    sudo apt-get update
-    sudo apt-get install amass
+    sudo snap install amass
     
     installBanner "subfinder"
     if [ -e ~/go/bin/subfinder ]; then
