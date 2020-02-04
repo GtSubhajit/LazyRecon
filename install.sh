@@ -55,6 +55,9 @@ subEnumTools(){
     if [ ! -x "$(command -v amass)" ]; then
     installBanner "Amass"
     sudo snap install amass
+    else
+        echo -e "${BLUE}[!] Amass already exists...\n${RESET}"
+    fi
     
     installBanner "subfinder"
     if [ -e ~/go/bin/subfinder ]; then
