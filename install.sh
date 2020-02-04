@@ -64,6 +64,7 @@ subEnumTools(){
         echo -e "${BLUE}[!] Subfinder already exists...\n${RESET}"
     else 
         go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+        
         echo -e "${RED}[+] Setting up API keys for subfinder after first run in HOME/.config/subfinder/config.yaml check offical repo for more information.${RESET}"
     fi
 
